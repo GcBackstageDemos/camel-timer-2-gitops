@@ -34,9 +34,9 @@ spec:
   tasks:
     - name: clone
       params:
-        - name: url
+        - name: URL
           value: $(params.git-url)
-        - name: revision
+        - name: REVISION
           value: $(params.git-revision)
       taskRef:
         resolver: cluster
