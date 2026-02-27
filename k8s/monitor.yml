@@ -1,0 +1,14 @@
+apiVersion: monitoring.coreos.com/v1
+kind: PodMonitor
+metadata:
+  name: camel-timer-2
+spec:
+  podMetricsEndpoints:
+    - bearerTokenSecret:
+        key: ''
+      path: /q/metrics
+      port: http
+  selector:
+    matchLabels:
+      backstage.io/kubernetes-id: camel-timer-2
+      app.kubernetes.io/instance: camel-timer-2    
